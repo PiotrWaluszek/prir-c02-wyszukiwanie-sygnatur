@@ -1,0 +1,49 @@
+dataset,size,npat,minlen,maxlen,hit-rate,partial-rate,prefix-share,alphabet,no-match,hot-region,seed,experiments
+ds-054c81ba98,256M,1000,16,32,10,300,0.6,full,,,2026,e10_grid_cpu g10_grid
+ds-05d32516fc,1G,1000,8,32,10,0,0.3,full,,,2026,e1_size g1_size g7_pipeline
+ds-0617b823d7,256M,1000,16,32,10,30000,0.6,full,,,2026,e10_grid_cpu g10_grid
+ds-0a17923e58,256M,1000,4,8,10,0,0.6,full,,,2026,e10_grid_cpu g10_grid
+ds-0a57b26115,2G,1000,8,32,10,0,0.3,full,,,2026,e1_size g1_size
+ds-0add35f47c,256M,1000,32,64,10,0,0.3,full,,,2026,e3_len g3_len
+ds-122e29c269,256M,1000,8,32,10,0,0.3,ascii,,,2026,g6_divergence
+ds-170d145966,512M,1000,4,8,10,0,0.3,full,,,2026,e7_chunk
+ds-1fc8278830,256M,1000,32,64,10,30000,0.6,full,,,2026,e10_grid_cpu g10_grid
+ds-2487591054,512M,1000,32,64,10,0,0.3,full,,,2026,e7_chunk
+ds-25ddd05799,256M,1000,8,32,10,0,0.9,full,,,2026,g6_divergence
+ds-299ea8016e,16M,1000,8,32,10,0,0.3,full,,,2026,e1_size g1_size
+ds-3505aa92f3,256M,1000,8,16,10,30000,0.6,full,,,2026,e10_grid_cpu g10_grid
+ds-364e0dede0,256M,1000,4,8,10,0,0.3,full,,,2026,e3_len g3_len
+ds-3b00b99c3f,256M,1000,8,32,10,0,0.3,dna,,,2026,g6_divergence
+ds-3e2c36e27c,256M,1000,8,32,1,0,0.3,full,,,2026,e4_hits g4_hits
+ds-3e327cee7e,256M,10,8,32,10,0,0.3,full,,,2026,e2_npat g2_npat
+ds-3e490d12e3,256M,1000,8,16,10,0,0.3,full,,,2026,e3_len g3_len
+ds-3ff3f79981,512M,1000,8,32,10,0,0.3,full,,,2026,e1_size e5_omp e6_mpi e7_chunk g1_size g5_block
+ds-442cc8a6cc,256M,1000,8,32,10,0,0.6,full,,,2026,g6_divergence
+ds-4575aefcb0,256M,10000,8,32,10,0,0.3,full,,,2026,e2_npat e8b_interleave g2_npat
+ds-5125151fc7,64M,1000,8,32,10,0,0.3,full,,,2026,e1_size g1_size
+ds-51f213d234,256M,1000,4,8,10,300,0.6,full,,,2026,e10_grid_cpu g10_grid
+ds-529a6b08e8,32M,1000,8,32,10,0,0.3,full,,,2026,e1_size g1_size
+ds-79e84c557a,256M,1000,8,16,10,300,0.6,full,,,2026,e10_grid_cpu g10_grid
+ds-7c4c650a0f,256M,1000,8,32,100,0,0.3,full,,,2026,e4_hits g4_hits
+ds-81f333f41d,256M,1000,8,32,10,0,0.3,full,,,2028,e12_seeds
+ds-82190f309c,256M,100000,8,32,10,0,0.3,full,,,2026,e2_npat g2_npat
+ds-884893597c,256M,1000,8,32,0,0,0.3,full,True,,2026,e4_hits g4_hits
+ds-93ee2bcf82,128M,1000,8,32,10,0,0.3,full,,,2026,e1_size g1_size
+ds-95a3f83e2a,256M,1000,8,32,10,0,0.0,full,,,2026,g6_divergence
+ds-9907d28afb,256M,1000,8,32,10,0,0.3,full,,,2027,e12_seeds
+ds-9b1ee45a67,256M,1000,32,64,10,3000,0.6,full,,,2026,e10_grid_cpu g10_grid
+ds-a0623c2713,512M,1000,8,32,400,800,0.3,full,,224M:64M:500,2026,e7_chunk
+ds-a6a47e0259,256M,1000,16,32,10,0,0.3,full,,,2026,e3_len g3_len
+ds-ae44d6a1d0,256M,1000,4,8,10,30000,0.6,full,,,2026,e10_grid_cpu g10_grid
+ds-b029a17bc1,256M,1000,8,16,10,3000,0.6,full,,,2026,e10_grid_cpu g10_grid
+ds-b24dff522f,256M,1000,8,32,10,0,0.3,16,,,2026,g6_divergence
+ds-b9580af6db,256M,1000,16,32,10,3000,0.6,full,,,2026,e10_grid_cpu g10_grid
+ds-bf4a4dbca7,256M,1000,32,64,10,300,0.6,full,,,2026,e10_grid_cpu g10_grid
+ds-d552c1194a,256M,1000,4,64,10,0,0.3,full,,,2026,e3_len g3_len
+ds-e100bfadce,256M,1000,8,16,10,0,0.6,full,,,2026,e10_grid_cpu g10_grid
+ds-e3744d63ef,256M,1000,32,64,10,0,0.6,full,,,2026,e10_grid_cpu g10_grid
+ds-e813d930c4,256M,1000,4,8,10,3000,0.6,full,,,2026,e10_grid_cpu g10_grid
+ds-f141942ee3,256M,1000,16,32,10,0,0.6,full,,,2026,e10_grid_cpu g10_grid
+ds-f418648102,256M,1000,8,32,1000,0,0.3,full,,,2026,e4_hits g4_hits
+ds-f935964a00,256M,100,8,32,10,0,0.3,full,,,2026,e2_npat e8b_interleave g2_npat
+ds-fd003b218b,256M,1000,8,32,10,0,0.3,full,,,2026,e12_seeds e1_size e2_npat e4_hits e8b_interleave g1_size g2_npat g4_hits g6_divergence

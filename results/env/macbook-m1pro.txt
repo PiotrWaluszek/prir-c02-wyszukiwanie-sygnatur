@@ -1,0 +1,54 @@
+# Environment - 2026-11-01 18:52 UTC
+
+## git
+37e21d4f0563f719573f10551e05c97ca166e212
+ M README.md
+ M bench/run.py
+ M results/env/macbook-m1pro.txt
+R  results/raw/e10_grid_cpu.csv -> results/raw/archive-cpu-obciazony-mac/e10_grid_cpu.csv
+R  results/raw/e10_grid_cpu_stats.csv -> results/raw/archive-cpu-obciazony-mac/e10_grid_cpu_stats.csv
+R  results/raw/e1_size.csv -> results/raw/archive-cpu-obciazony-mac/e1_size.csv
+R  results/raw/e2_npat.csv -> results/raw/archive-cpu-obciazony-mac/e2_npat.csv
+R  results/raw/e2_npat_stats.csv -> results/raw/archive-cpu-obciazony-mac/e2_npat_stats.csv
+R  results/raw/e3_len.csv -> results/raw/archive-cpu-obciazony-mac/e3_len.csv
+R  results/raw/e3_len_stats.csv -> results/raw/archive-cpu-obciazony-mac/e3_len_stats.csv
+R  results/raw/e4_hits.csv -> results/raw/archive-cpu-obciazony-mac/e4_hits.csv
+R  results/raw/e5_omp.csv -> results/raw/archive-cpu-obciazony-mac/e5_omp.csv
+R  results/raw/e6_mpi.csv -> results/raw/archive-cpu-obciazony-mac/e6_mpi.csv
+R  results/raw/e7_chunk.csv -> results/raw/archive-cpu-obciazony-mac/e7_chunk.csv
+R  results/raw/e8b_interleave.csv -> results/raw/archive-cpu-obciazony-mac/e8b_interleave.csv
+R  results/raw/mac_run.log -> results/raw/archive-cpu-obciazony-mac/mac_run.log
+ M results/raw/datasets.csv
+ M scripts/check_results.py
+ M scripts/plots/plot_e6_mpi.py
+ M scripts/plots/plot_gpu.py
+
+## os
+Darwin Piotrs-MacBook-Pro.local 27.0.0 Darwin Kernel Version 27.0.0: Tue Aug 11 21:22:49 PDT 2026; root:xnu-13432.1.9~1/RELEASE_ARM64_T6000 arm64
+ProductName:		macOS
+ProductVersion:		27.0
+BuildVersion:		26A428
+
+## cpu
+Apple M1 Pro
+logical cpus:      10
+performance cores: 8
+efficiency cores:  2
+L1d (P): 131072  L2 (P cluster): 12582912
+memory bytes: 17179869184
+
+## power
+Now drawing from 'AC Power'
+ -InternalBattery-0 (id=22413411)	95%; charging; 0:33 remaining present: true
+ lowpowermode         0
+
+## compilers
+Apple clang version 16.0.0 (clang-1600.0.26.6)
+cmake version 4.4.5
+libomp: 20.1.6
+mpirun (Open MPI) 5.0.11
+(unavailable: nvcc --version)
+Python 3.14.3
+
+## gpu
+(unavailable: nvidia-smi --query-gpu=name,driver_version,memory.total,clocks.max.sm,clocks.max.mem,pcie.link.gen.max,pcie.link.width.max --format=csv)

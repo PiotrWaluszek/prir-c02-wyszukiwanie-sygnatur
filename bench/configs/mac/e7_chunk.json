@@ -1,0 +1,77 @@
+{
+  "name": "e7_chunk",
+  "title": "Dodatek dla pary: czas vs rozmiar kawałka (static / dynamic), dane równe i z gorącym obszarem",
+  "matrix": [
+    {
+      "hit-rate": 10
+    },
+    {
+      "hit-rate": 400,
+      "partial-rate": 800,
+      "hot-region": "224M:64M:500"
+    },
+    {
+      "minlen": 4,
+      "maxlen": 8
+    },
+    {
+      "minlen": 32,
+      "maxlen": 64
+    }
+  ],
+  "runs": [
+    {
+      "impl": "omp",
+      "label": "blocks",
+      "args": {
+        "threads": [
+          8,
+          10
+        ],
+        "schedule": "blocks"
+      }
+    },
+    {
+      "impl": "omp",
+      "label": "static",
+      "args": {
+        "threads": [
+          8,
+          10
+        ],
+        "schedule": "static",
+        "chunk": [
+          "4k",
+          "16k",
+          "64k",
+          "256k",
+          "1M",
+          "4M",
+          "16M",
+          "64M"
+        ]
+      }
+    },
+    {
+      "impl": "omp",
+      "label": "dynamic",
+      "args": {
+        "threads": [
+          8,
+          10
+        ],
+        "schedule": "dynamic",
+        "chunk": [
+          "4k",
+          "16k",
+          "64k",
+          "256k",
+          "1M",
+          "4M",
+          "16M",
+          "64M"
+        ]
+      }
+    }
+  ]
+}

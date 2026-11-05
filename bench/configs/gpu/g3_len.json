@@ -1,0 +1,41 @@
+{
+  "name": "g3_len",
+  "dataset": {
+    "size": "256M"
+  },
+  "matrix": [
+    {
+      "minlen": 4,
+      "maxlen": 8
+    },
+    {
+      "minlen": 8,
+      "maxlen": 16
+    },
+    {
+      "minlen": 16,
+      "maxlen": 32
+    },
+    {
+      "minlen": 32,
+      "maxlen": 64
+    },
+    {
+      "minlen": 4,
+      "maxlen": 64
+    }
+  ],
+  "runs": [
+    {
+      "impl": "cuda",
+      "label": "cuda",
+      "args": {
+        "kernel": "smem-root"
+      }
+    },
+    {
+      "impl": "seq",
+      "label": "seq-colab"
+    }
+  ]
+}

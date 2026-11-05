@@ -1,0 +1,158 @@
+warning: uncommitted changes are NOT uploaded
+[colab] Creating session 'c02'...
+[colab] Session READY.
+[colab] Uploaded '/var/folders/lz/gpys8mhn5kj8krktmn5782xw0000gn/T/tmp.V03Wm2uTmz/src.tgz' to '/content/src.tgz'
+[doctest] assertions: 16478 | 16478 passed | 0 failed |
+[doctest] Status: SUCCESS!
+ALL OK
+wrote /content/env.txt
+[remote exit] 0
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ ~/.colab-cli/lib/python3.14/site-packages/jupyter_kernel_ │
+│ client/wsclient.py:1353 in _recv_reply                                       │
+│                                                                              │
+│   1350 │   │   │   │   if channel == "control":                              │
+│   1351 │   │   │   │   │   reply =                                           │
+│        self.control_channel.get_msg(timeout=timeout)                         │
+│   1352 │   │   │   │   else:                                                 │
+│ ❱ 1353 │   │   │   │   │   reply =                                           │
+│        self.shell_channel.get_msg(timeout=timeout)                           │
+│   1354 │   │   │   except queue.Empty as e:                                  │
+│   1355 │   │   │   │   msg = "Timeout waiting for reply"                     │
+│   1356 │   │   │   │   raise TimeoutError(msg) from e                        │
+│                                                                              │
+│ ~/.colab-cli/lib/python3.14/site-packages/jupyter_kernel_ │
+│ client/wsclient.py:411 in get_msg                                            │
+│                                                                              │
+│    408 │   │   ------                                                        │
+│    409 │   │   Empty exception if no message is received before the timeout. │
+│    410 │   │   """                                                           │
+│ ❱  411 │   │   return self._messages.get(timeout=timeout)                    │
+│    412 │                                                                     │
+│    413 │   def get_msgs(self) -> list[dict[str, t.Any]]:                     │
+│    414 │   │   """Get all available messages.                                │
+│                                                                              │
+│ /opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versio │
+│ ns/3.14/lib/python3.14/queue.py:209 in get                                   │
+│                                                                              │
+│   206 │   │   │   │   while not self._qsize():                               │
+│   207 │   │   │   │   │   remaining = endtime - time()                       │
+│   208 │   │   │   │   │   if remaining <= 0.0:                               │
+│ ❱ 209 │   │   │   │   │   │   raise Empty                                    │
+│   210 │   │   │   │   │   self.not_empty.wait(remaining)                     │
+│   211 │   │   │   │   │   if self.is_shutdown and not self._qsize():         │
+│   212 │   │   │   │   │   │   raise ShutDown                                 │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Empty
+
+The above exception was the direct cause of the following exception:
+
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ ~/.colab-cli/lib/python3.14/site-packages/colab_cli/comma │
+│ nds/execution.py:258 in exec_command                                         │
+│                                                                              │
+│   255 │   │   │   )                                                          │
+│   256 │   │   │   state.store.add(s)                                         │
+│   257 │   │   │                                                              │
+│ ❱ 258 │   │   │   outputs = runtime.execute_code(                            │
+│   259 │   │   │   │   code,                                                  │
+│   260 │   │   │   │   output_hook=lambda o: display_output(o, output_image), │
+│   261 │   │   │   │   timeout=timeout,                                       │
+│                                                                              │
+│ ~/.colab-cli/lib/python3.14/site-packages/colab_cli/runti │
+│ me.py:237 in execute_code                                                    │
+│                                                                              │
+│   234 │   │   │   │   │   │   if idx < len(outputs):                         │
+│   235 │   │   │   │   │   │   │   output_hook(outputs[idx])                  │
+│   236 │   │   │                                                              │
+│ ❱ 237 │   │   │   reply = self.kernel_client.execute_interactive(            │
+│   238 │   │   │   │   code, output_hook=wrapped_output_hook, **kwargs        │
+│   239 │   │   │   )                                                          │
+│   240 │   │   │   # execute_interactive returns the raw reply message        │
+│                                                                              │
+│ ~/.colab-cli/lib/python3.14/site-packages/jupyter_kernel_ │
+│ client/client.py:364 in execute_interactive                                  │
+│                                                                              │
+│   361 │   │   │   The reply message for this request                         │
+│   362 │   │   """                                                            │
+│   363 │   │   self._set_variables(variables)                                 │
+│ ❱ 364 │   │   return self._manager.client.execute_interactive(               │
+│   365 │   │   │   code,                                                      │
+│   366 │   │   │   silent=silent,                                             │
+│   367 │   │   │   store_history=store_history,                               │
+│                                                                              │
+│ ~/.colab-cli/lib/python3.14/site-packages/jupyter_kernel_ │
+│ client/wsclient.py:1112 in execute_interactive                               │
+│                                                                              │
+│   1109 │   │   │   # output is done, get the reply                           │
+│   1110 │   │   │   if timeout is not None:                                   │
+│   1111 │   │   │   │   timeout = max(0, deadline - time.monotonic())         │
+│ ❱ 1112 │   │   │   return self._recv_reply(msg_id, timeout=timeout)          │
+│   1113 │                                                                     │
+│   1114 │   def is_alive(self) -> bool:                                       │
+│   1115 │   │   """Is the kernel process still running?"""                    │
+│                                                                              │
+│ ~/.colab-cli/lib/python3.14/site-packages/jupyter_kernel_ │
+│ client/wsclient.py:1356 in _recv_reply                                       │
+│                                                                              │
+│   1353 │   │   │   │   │   reply =                                           │
+│        self.shell_channel.get_msg(timeout=timeout)                           │
+│   1354 │   │   │   except queue.Empty as e:                                  │
+│   1355 │   │   │   │   msg = "Timeout waiting for reply"                     │
+│ ❱ 1356 │   │   │   │   raise TimeoutError(msg) from e                        │
+│   1357 │   │   │   if reply["parent_header"].get("msg_id") != msg_id:        │
+│   1358 │   │   │   │   self.log.debug("Ignoring message not from request:    │
+│        %s", msg_id)                                                          │
+│   1359 │   │   │   │   continue                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+TimeoutError: Timeout waiting for reply
+[colab] Downloaded '/content/env.txt' to 'results/env/colab-t4.txt'
+[g1_size] started
+  STATE running   [13/48] seq-colab-il8 size=1G
+  STATE running   [14/48] seq-colab size=1G
+  STATE running   [17/48] omp-colab-p2 size=1G
+  STATE running   [23/48] cuda size=256M
+  STATE running   [24/48] seq-colab-il8 size=256M
+  STATE running   [25/48] seq-colab size=2G
+  STATE running   [25/48] seq-colab size=2G
+  STATE running   [26/48] omp-colab-p2 size=2G
+  STATE running   [27/48] seq-colab-il8 size=2G
+  STATE running   [29/48] omp-colab-p2-il8 size=2G
+  STATE running   [39/48] omp-colab-p2 size=512M
+  STATE running   [41/48] cuda size=512M
+  STATE 0   [48/48] seq-colab-il8 size=64M
+[colab] Downloaded '/content/results/g1_size.csv' to 'results/raw/g1_size.csv'
+[colab] Download failed: File or directory not found: /content/results/g1_size_stats.csv
+[g1_size] downloaded
+[g5_block] started
+  
+  STATE 0   [30/30] cuda kernel=global;block=512
+[colab] Downloaded '/content/results/g5_block.csv' to 'results/raw/g5_block.csv'
+[colab] Download failed: File or directory not found: /content/results/g5_block_stats.csv
+[g5_block] downloaded
+[g7_pipeline] started
+  STATE running   [11/13] cuda-pipeline streams=1;chunk=4M
+  STATE 0   [13/13] cuda-pipeline streams=1;chunk=16M
+[colab] Downloaded '/content/results/g7_pipeline.csv' to 'results/raw/g7_pipeline.csv'
+[colab] Download failed: File or directory not found: /content/results/g7_pipeline_stats.csv
+[g7_pipeline] downloaded
+[g2_npat] started
+  STATE running   [11/20] seq-stats npat=1000
+  STATE running   [17/20] seq-colab npat=100000
+  STATE running   [17/20] seq-colab npat=100000
+  STATE running   [17/20] seq-colab npat=100000
+  STATE running   [18/20] omp-colab-p2-il8 npat=100000
+  STATE running   [20/20] seq-stats npat=100000
+  STATE 0   [20/20] seq-stats npat=100000
+[colab] Downloaded '/content/results/g2_npat.csv' to 'results/raw/g2_npat.csv'
+[colab] Downloaded '/content/results/g2_npat_stats.csv' to 'results/raw/g2_npat_stats.csv'
+[g2_npat] downloaded
+[g3_len] started
+  STATE running   [7/10] cuda minlen=4;maxlen=64
+  STATE 0   [10/10] seq-colab minlen=4;maxlen=8
+[colab] Downloaded '/content/results/g3_len.csv' to 'results/raw/g3_len.csv'
+[colab] Download failed: File or directory not found: /content/results/g3_len_stats.csv
+[g3_len] downloaded
+bench/colab/remote.sh: line 25: 47125 Alarm clock: 14         perl -e 'alarm shift; exec @ARGV' "${REMOTE_TIMEOUT:-900}" "$colab" exec -s "$session" -f "$tmp/job.py" 2>&1
+     47126 Done                    | tee "$tmp/out"
+exit 1

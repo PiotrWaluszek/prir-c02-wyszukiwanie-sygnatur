@@ -1,0 +1,520 @@
+[e8b_interleave] 30 runs, 3 datasets
+  gen --size 256M --npat 100 --minlen 8 --maxlen 32 --hit-rate 10 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-f935964a00.bin 268435456 B, 100 patterns (len 8..32), injected 2560 hits + 0 boundary + 0 partial, dropped 0, 163 ms
+  [1/30] seq-dense npat=100;interleave=2
+  [2/30] seq-compressed npat=100;interleave=1
+  [3/30] seq-compressed npat=100;interleave=4
+  [4/30] seq-compressed npat=100;interleave=16
+  [5/30] seq-dense npat=100;interleave=1
+  [6/30] seq-compressed npat=100;interleave=2
+  [7/30] seq-dense npat=100;interleave=8
+  [8/30] seq-compressed npat=100;interleave=8
+  [9/30] seq-dense npat=100;interleave=4
+  [10/30] seq-dense npat=100;interleave=16
+  gen --size 256M --npat 1000 --minlen 8 --maxlen 32 --hit-rate 10 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-fd003b218b.bin 268435456 B, 1000 patterns (len 8..32), injected 2560 hits + 0 boundary + 0 partial, dropped 0, 143 ms
+  [11/30] seq-compressed npat=1000;interleave=2
+  [12/30] seq-dense npat=1000;interleave=2
+  [13/30] seq-dense npat=1000;interleave=1
+  [14/30] seq-compressed npat=1000;interleave=4
+  [15/30] seq-dense npat=1000;interleave=8
+  [16/30] seq-compressed npat=1000;interleave=16
+  [17/30] seq-dense npat=1000;interleave=4
+  [18/30] seq-dense npat=1000;interleave=16
+  [19/30] seq-compressed npat=1000;interleave=1
+  [20/30] seq-compressed npat=1000;interleave=8
+  gen --size 256M --npat 10000 --minlen 8 --maxlen 32 --hit-rate 10 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-4575aefcb0.bin 268435456 B, 10000 patterns (len 8..32), injected 2559 hits + 0 boundary + 0 partial, dropped 1, 138 ms
+  [21/30] seq-compressed npat=10000;interleave=2
+  [22/30] seq-dense npat=10000;interleave=8
+  [23/30] seq-compressed npat=10000;interleave=16
+  [24/30] seq-dense npat=10000;interleave=1
+  [25/30] seq-compressed npat=10000;interleave=8
+  [26/30] seq-dense npat=10000;interleave=4
+  [27/30] seq-dense npat=10000;interleave=2
+  [28/30] seq-dense npat=10000;interleave=16
+  [29/30] seq-compressed npat=10000;interleave=1
+  [30/30] seq-compressed npat=10000;interleave=4
+[e8b_interleave] done in 317 s -> ~/prir-projekt/results/raw/e8b_interleave.csv
+[e5_omp] 51 runs, 1 datasets
+  gen --size 512M --npat 1000 --minlen 8 --maxlen 32 --hit-rate 10 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-3ff3f79981.bin 536870912 B, 1000 patterns (len 8..32), injected 5120 hits + 0 boundary + 0 partial, dropped 0, 247 ms
+  [1/51] omp-blocks threads=2
+  [2/51] omp-static-1M threads=5
+  [3/51] omp-dynamic-1M-il8 threads=7
+  [4/51] omp-blocks threads=9
+  [5/51] omp-dynamic-1M threads=1
+  [6/51] omp-dynamic-1M threads=9
+  [7/51] omp-dynamic-1M-il8 threads=9
+  [8/51] omp-blocks threads=5
+  [9/51] omp-dynamic-1M-il8 threads=6
+  [10/51] omp-static-1M threads=4
+  [11/51] omp-static-1M threads=1
+  [12/51] omp-guided-1M threads=2
+  [13/51] omp-guided-1M threads=4
+  [14/51] omp-dynamic-1M threads=6
+  [15/51] omp-dynamic-1M-il8 threads=10
+  [16/51] omp-static-1M threads=9
+  [17/51] omp-guided-1M threads=9
+  [18/51] omp-guided-1M threads=8
+  [19/51] omp-static-1M threads=2
+  [20/51] omp-dynamic-1M threads=2
+  [21/51] omp-guided-1M threads=7
+  [22/51] omp-static-1M threads=10
+  [23/51] omp-dynamic-1M-il8 threads=2
+  [24/51] omp-guided-1M threads=5
+  [25/51] omp-guided-1M threads=3
+  [26/51] omp-blocks threads=10
+  [27/51] omp-blocks threads=3
+  [28/51] omp-static-1M threads=8
+  [29/51] omp-dynamic-1M-il8 threads=5
+  [30/51] omp-dynamic-1M threads=5
+  [31/51] omp-dynamic-1M threads=3
+  [32/51] omp-static-1M threads=7
+  [33/51] omp-dynamic-1M-il8 threads=3
+  [34/51] seq 
+  [35/51] omp-dynamic-1M threads=7
+  [36/51] omp-guided-1M threads=10
+  [37/51] omp-blocks threads=1
+  [38/51] omp-dynamic-1M-il8 threads=4
+  [39/51] omp-blocks threads=6
+  [40/51] omp-static-1M threads=3
+  [41/51] omp-dynamic-1M threads=4
+  [42/51] omp-dynamic-1M-il8 threads=1
+  [43/51] omp-dynamic-1M threads=10
+  [44/51] omp-dynamic-1M threads=8
+  [45/51] omp-guided-1M threads=1
+  [46/51] omp-blocks threads=7
+  [47/51] omp-static-1M threads=6
+  [48/51] omp-blocks threads=4
+  [49/51] omp-dynamic-1M-il8 threads=8
+  [50/51] omp-guided-1M threads=6
+  [51/51] omp-blocks threads=8
+[e5_omp] done in 388 s -> ~/prir-projekt/results/raw/e5_omp.csv
+[e6_mpi] 11 runs, 1 datasets
+  [1/11] mpi np=6
+  [2/11] mpi np=8
+  [3/11] mpi np=10
+  [4/11] mpi np=7
+  [5/11] mpi np=5
+  [6/11] mpi np=3
+  [7/11] seq 
+  [8/11] mpi np=4
+  [9/11] mpi np=1
+  [10/11] mpi np=9
+  [11/11] mpi np=2
+[e6_mpi] done in 109 s -> ~/prir-projekt/results/raw/e6_mpi.csv
+[e7_chunk] 136 runs, 4 datasets
+  [1/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=8;chunk=64M
+  [2/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=8;chunk=256k
+  [3/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=8;chunk=64k
+  [4/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=8;chunk=16M
+  [5/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=8;chunk=1M
+  [6/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=8;chunk=4k
+  [7/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=8;chunk=4M
+  [8/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=10;chunk=64M
+  [9/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=10;chunk=1M
+  [10/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=8;chunk=16k
+  [11/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=10;chunk=64M
+  [12/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=10;chunk=4k
+  [13/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=8;chunk=1M
+  [14/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=10;chunk=16M
+  [15/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=8;chunk=256k
+  [16/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=10;chunk=16k
+  [17/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=10;chunk=4k
+  [18/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=8;chunk=64M
+  [19/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=10;chunk=4M
+  [20/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=8;chunk=64k
+  [21/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=8;chunk=16M
+  [22/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=10;chunk=4M
+  [23/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=8;chunk=4M
+  [24/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=10;chunk=64k
+  [25/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=10;chunk=16k
+  [26/136] blocks hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=10
+  [27/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=8;chunk=4k
+  [28/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=10;chunk=256k
+  [29/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=10;chunk=256k
+  [30/136] blocks hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=8
+  [31/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=8;chunk=16k
+  [32/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=10;chunk=64k
+  [33/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=10;chunk=1M
+  [34/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=8;maxlen=32;threads=10;chunk=16M
+  gen --size 512M --npat 1000 --minlen 32 --maxlen 64 --hit-rate 10 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-2487591054.bin 536870912 B, 1000 patterns (len 32..64), injected 5118 hits + 0 boundary + 0 partial, dropped 2, 302 ms
+  [35/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=10;chunk=4M
+  [36/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=10;chunk=16k
+  [37/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=8;chunk=64M
+  [38/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=10;chunk=64M
+  [39/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=8;chunk=1M
+  [40/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=8;chunk=256k
+  [41/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=8;chunk=256k
+  [42/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=10;chunk=16M
+  [43/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=10;chunk=4M
+  [44/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=10;chunk=1M
+  [45/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=10;chunk=16k
+  [46/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=10;chunk=1M
+  [47/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=8;chunk=4M
+  [48/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=8;chunk=16k
+  [49/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=8;chunk=4M
+  [50/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=10;chunk=16M
+  [51/136] blocks hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=10
+  [52/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=10;chunk=256k
+  [53/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=8;chunk=64M
+  [54/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=8;chunk=16k
+  [55/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=10;chunk=64k
+  [56/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=8;chunk=16M
+  [57/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=8;chunk=4k
+  [58/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=10;chunk=4k
+  [59/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=8;chunk=64k
+  [60/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=8;chunk=1M
+  [61/136] blocks hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=8
+  [62/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=10;chunk=64M
+  [63/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=10;chunk=4k
+  [64/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=8;chunk=64k
+  [65/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=10;chunk=64k
+  [66/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=8;chunk=4k
+  [67/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=10;chunk=256k
+  [68/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=32;maxlen=64;threads=8;chunk=16M
+  gen --size 512M --npat 1000 --minlen 4 --maxlen 8 --hit-rate 10 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-170d145966.bin 536870912 B, 1000 patterns (len 4..8), injected 5120 hits + 0 boundary + 0 partial, dropped 0, 271 ms
+  [69/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=10;chunk=256k
+  [70/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=10;chunk=16M
+  [71/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=10;chunk=16k
+  [72/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=8;chunk=16M
+  [73/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=10;chunk=4M
+  [74/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=8;chunk=1M
+  [75/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=10;chunk=16k
+  [76/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=10;chunk=64k
+  [77/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=8;chunk=256k
+  [78/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=10;chunk=4k
+  [79/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=10;chunk=1M
+  [80/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=10;chunk=64M
+  [81/136] blocks hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=8
+  [82/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=10;chunk=16M
+  [83/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=10;chunk=64M
+  [84/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=10;chunk=64k
+  [85/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=8;chunk=64k
+  [86/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=10;chunk=4k
+  [87/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=8;chunk=64k
+  [88/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=8;chunk=4M
+  [89/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=8;chunk=1M
+  [90/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=8;chunk=16k
+  [91/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=8;chunk=64M
+  [92/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=8;chunk=4k
+  [93/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=8;chunk=4k
+  [94/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=8;chunk=16k
+  [95/136] blocks hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=10
+  [96/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=10;chunk=4M
+  [97/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=8;chunk=4M
+  [98/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=8;chunk=16M
+  [99/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=8;chunk=256k
+  [100/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=10;chunk=1M
+  [101/136] static hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=8;chunk=64M
+  [102/136] dynamic hit-rate=10;partial-rate=0;hot-region=-;minlen=4;maxlen=8;threads=10;chunk=256k
+  gen --size 512M --npat 1000 --minlen 8 --maxlen 32 --hit-rate 400 --partial-rate 800 --prefix-share 0.3 --alphabet full --seed 2026 --hot-region 224M:64M:500
+sigscan-gen: ~/prir-projekt/data/ds-a0623c2713.bin 536870912 B, 1000 patterns (len 8..32), injected 183595 hits + 0 boundary + 364914 partial, dropped 65891, 322 ms
+  [103/136] static hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=8;chunk=256k
+  [104/136] dynamic hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=8;chunk=4k
+  [105/136] static hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=8;chunk=4M
+  [106/136] dynamic hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=8;chunk=64M
+  [107/136] static hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=10;chunk=16k
+  [108/136] static hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=10;chunk=64k
+  [109/136] dynamic hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=10;chunk=16M
+  [110/136] dynamic hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=10;chunk=4k
+  [111/136] static hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=8;chunk=64M
+  [112/136] blocks hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=10
+  [113/136] static hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=10;chunk=64M
+  [114/136] static hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=10;chunk=256k
+  [115/136] dynamic hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=10;chunk=16k
+  [116/136] static hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=10;chunk=16M
+  [117/136] static hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=8;chunk=4k
+  [118/136] static hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=8;chunk=64k
+  [119/136] dynamic hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=10;chunk=1M
+  [120/136] static hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=8;chunk=16M
+  [121/136] static hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=8;chunk=16k
+  [122/136] dynamic hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=8;chunk=16M
+  [123/136] static hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=10;chunk=4k
+  [124/136] dynamic hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=10;chunk=256k
+  [125/136] dynamic hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=8;chunk=1M
+  [126/136] dynamic hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=10;chunk=64M
+  [127/136] dynamic hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=8;chunk=64k
+  [128/136] static hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=10;chunk=1M
+  [129/136] static hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=8;chunk=1M
+  [130/136] dynamic hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=8;chunk=4M
+  [131/136] dynamic hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=8;chunk=256k
+  [132/136] static hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=10;chunk=4M
+  [133/136] dynamic hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=10;chunk=64k
+  [134/136] dynamic hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=8;chunk=16k
+  [135/136] dynamic hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=10;chunk=4M
+  [136/136] blocks hit-rate=400;partial-rate=800;hot-region=224M:64M:500;minlen=8;maxlen=32;threads=8
+[e7_chunk] done in 665 s -> ~/prir-projekt/results/raw/e7_chunk.csv
+[e1_size] 40 runs, 8 datasets
+  gen --size 128M --npat 1000 --minlen 8 --maxlen 32 --hit-rate 10 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-93ee2bcf82.bin 134217728 B, 1000 patterns (len 8..32), injected 1279 hits + 0 boundary + 0 partial, dropped 1, 77 ms
+  [1/40] omp-p10 size=128M
+  [2/40] mpi-np8 size=128M
+  [3/40] omp-p10-il8 size=128M
+  [4/40] seq size=128M
+  [5/40] omp-p8 size=128M
+  gen --size 16M --npat 1000 --minlen 8 --maxlen 32 --hit-rate 10 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-299ea8016e.bin 16777216 B, 1000 patterns (len 8..32), injected 160 hits + 0 boundary + 0 partial, dropped 0, 26 ms
+  [6/40] omp-p10 size=16M
+  [7/40] omp-p8 size=16M
+  [8/40] seq size=16M
+  [9/40] mpi-np8 size=16M
+  [10/40] omp-p10-il8 size=16M
+  gen --size 1G --npat 1000 --minlen 8 --maxlen 32 --hit-rate 10 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-05d32516fc.bin 1073741824 B, 1000 patterns (len 8..32), injected 10239 hits + 0 boundary + 0 partial, dropped 1, 507 ms
+  [11/40] omp-p10 size=1G
+  [12/40] omp-p10-il8 size=1G
+  [13/40] mpi-np8 size=1G
+  [14/40] seq size=1G
+  [15/40] omp-p8 size=1G
+  [16/40] mpi-np8 size=256M
+  [17/40] seq size=256M
+  [18/40] omp-p8 size=256M
+  [19/40] omp-p10 size=256M
+  [20/40] omp-p10-il8 size=256M
+  gen --size 2G --npat 1000 --minlen 8 --maxlen 32 --hit-rate 10 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-0a57b26115.bin 2147483648 B, 1000 patterns (len 8..32), injected 20476 hits + 0 boundary + 0 partial, dropped 4, 1054 ms
+  [21/40] omp-p10 size=2G
+  [22/40] mpi-np8 size=2G
+  [23/40] seq size=2G
+  [24/40] omp-p10-il8 size=2G
+  [25/40] omp-p8 size=2G
+  gen --size 32M --npat 1000 --minlen 8 --maxlen 32 --hit-rate 10 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-529a6b08e8.bin 33554432 B, 1000 patterns (len 8..32), injected 320 hits + 0 boundary + 0 partial, dropped 0, 31 ms
+  [26/40] seq size=32M
+  [27/40] omp-p10-il8 size=32M
+  [28/40] omp-p8 size=32M
+  [29/40] omp-p10 size=32M
+  [30/40] mpi-np8 size=32M
+  [31/40] omp-p10-il8 size=512M
+  [32/40] omp-p10 size=512M
+  [33/40] omp-p8 size=512M
+  [34/40] seq size=512M
+  [35/40] mpi-np8 size=512M
+  gen --size 64M --npat 1000 --minlen 8 --maxlen 32 --hit-rate 10 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-5125151fc7.bin 67108864 B, 1000 patterns (len 8..32), injected 640 hits + 0 boundary + 0 partial, dropped 0, 61 ms
+  [36/40] omp-p8 size=64M
+  [37/40] seq size=64M
+  [38/40] omp-p10-il8 size=64M
+  [39/40] mpi-np8 size=64M
+  [40/40] omp-p10 size=64M
+[e1_size] done in 316 s -> ~/prir-projekt/results/raw/e1_size.csv
+[e2_npat] 34 runs, 5 datasets
+  gen --size 256M --npat 10 --minlen 8 --maxlen 32 --hit-rate 10 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-3e327cee7e.bin 268435456 B, 10 patterns (len 13..31), injected 2559 hits + 0 boundary + 0 partial, dropped 1, 145 ms
+  [1/34] omp-p10 npat=10
+  [2/34] seq-stats npat=10
+  [3/34] seq-compressed npat=10
+  [4/34] seq-dense npat=10
+  [5/34] omp-p10-il8 npat=10
+  [6/34] omp-p10-compressed npat=10
+  [7/34] mpi-np8 npat=10
+  [8/34] omp-p10-compressed npat=100
+  [9/34] seq-dense npat=100
+  [10/34] omp-p10 npat=100
+  [11/34] mpi-np8 npat=100
+  [12/34] omp-p10-il8 npat=100
+  [13/34] seq-stats npat=100
+  [14/34] seq-compressed npat=100
+  [15/34] mpi-np8 npat=1000
+  [16/34] omp-p10-compressed npat=1000
+  [17/34] seq-stats npat=1000
+  [18/34] omp-p10-il8 npat=1000
+  [19/34] seq-dense npat=1000
+  [20/34] seq-compressed npat=1000
+  [21/34] omp-p10 npat=1000
+  [22/34] omp-p10 npat=10000
+  [23/34] seq-dense npat=10000
+  [24/34] seq-compressed npat=10000
+  [25/34] omp-p10-il8 npat=10000
+  [26/34] mpi-np8 npat=10000
+  [27/34] seq-stats npat=10000
+  [28/34] omp-p10-compressed npat=10000
+  gen --size 256M --npat 100000 --minlen 8 --maxlen 32 --hit-rate 10 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-82190f309c.bin 268435456 B, 100000 patterns (len 8..32), injected 2559 hits + 0 boundary + 0 partial, dropped 1, 125 ms
+  [29/34] seq-stats npat=100000
+  [30/34] omp-p10-compressed npat=100000
+  [31/34] omp-p10-il8 npat=100000
+  [32/34] seq-dense npat=100000
+  [33/34] omp-p10 npat=100000
+  [34/34] seq-compressed npat=100000
+[e2_npat] done in 410 s -> ~/prir-projekt/results/raw/e2_npat.csv
+[e3_len] 25 runs, 5 datasets
+  gen --size 256M --npat 1000 --minlen 8 --maxlen 16 --hit-rate 10 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-3e490d12e3.bin 268435456 B, 1000 patterns (len 8..16), injected 2560 hits + 0 boundary + 0 partial, dropped 0, 141 ms
+  [1/25] seq minlen=8;maxlen=16
+  [2/25] omp-p10-il8 minlen=8;maxlen=16
+  [3/25] mpi-np8 minlen=8;maxlen=16
+  [4/25] omp-p10 minlen=8;maxlen=16
+  [5/25] seq-stats minlen=8;maxlen=16
+  gen --size 256M --npat 1000 --minlen 16 --maxlen 32 --hit-rate 10 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-a6a47e0259.bin 268435456 B, 1000 patterns (len 16..32), injected 2559 hits + 0 boundary + 0 partial, dropped 1, 148 ms
+  [6/25] seq minlen=16;maxlen=32
+  [7/25] seq-stats minlen=16;maxlen=32
+  [8/25] omp-p10 minlen=16;maxlen=32
+  [9/25] mpi-np8 minlen=16;maxlen=32
+  [10/25] omp-p10-il8 minlen=16;maxlen=32
+  gen --size 256M --npat 1000 --minlen 32 --maxlen 64 --hit-rate 10 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-0add35f47c.bin 268435456 B, 1000 patterns (len 32..64), injected 2558 hits + 0 boundary + 0 partial, dropped 2, 146 ms
+  [11/25] omp-p10 minlen=32;maxlen=64
+  [12/25] mpi-np8 minlen=32;maxlen=64
+  [13/25] omp-p10-il8 minlen=32;maxlen=64
+  [14/25] seq minlen=32;maxlen=64
+  [15/25] seq-stats minlen=32;maxlen=64
+  gen --size 256M --npat 1000 --minlen 4 --maxlen 64 --hit-rate 10 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-d552c1194a.bin 268435456 B, 1000 patterns (len 4..64), injected 2559 hits + 0 boundary + 0 partial, dropped 1, 145 ms
+  [16/25] seq minlen=4;maxlen=64
+  [17/25] omp-p10-il8 minlen=4;maxlen=64
+  [18/25] omp-p10 minlen=4;maxlen=64
+  [19/25] seq-stats minlen=4;maxlen=64
+  [20/25] mpi-np8 minlen=4;maxlen=64
+  gen --size 256M --npat 1000 --minlen 4 --maxlen 8 --hit-rate 10 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-364e0dede0.bin 268435456 B, 1000 patterns (len 4..8), injected 2560 hits + 0 boundary + 0 partial, dropped 0, 145 ms
+  [21/25] seq minlen=4;maxlen=8
+  [22/25] omp-p10 minlen=4;maxlen=8
+  [23/25] seq-stats minlen=4;maxlen=8
+  [24/25] mpi-np8 minlen=4;maxlen=8
+  [25/25] omp-p10-il8 minlen=4;maxlen=8
+[e3_len] done in 126 s -> ~/prir-projekt/results/raw/e3_len.csv
+[e4_hits] 30 runs, 5 datasets
+  gen --size 256M --npat 1000 --minlen 8 --maxlen 32 --hit-rate 0 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026 --no-match
+sigscan-gen: ~/prir-projekt/data/ds-884893597c.bin 268435456 B, 1000 patterns (len 8..32), injected 0 hits + 0 boundary + 0 partial, dropped 0, 422 ms
+  [1/30] seq-list hit-rate=0;no-match=True
+  [2/30] mpi-np8-list hit-rate=0;no-match=True
+  [3/30] seq-count hit-rate=0;no-match=True
+  [4/30] omp-p10-list hit-rate=0;no-match=True
+  [5/30] omp-p10-count hit-rate=0;no-match=True
+  [6/30] mpi-np8-count hit-rate=0;no-match=True
+  gen --size 256M --npat 1000 --minlen 8 --maxlen 32 --hit-rate 1 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-3e2c36e27c.bin 268435456 B, 1000 patterns (len 8..32), injected 256 hits + 0 boundary + 0 partial, dropped 0, 126 ms
+  [7/30] mpi-np8-list hit-rate=1;no-match=-
+  [8/30] mpi-np8-count hit-rate=1;no-match=-
+  [9/30] seq-list hit-rate=1;no-match=-
+  [10/30] omp-p10-list hit-rate=1;no-match=-
+  [11/30] seq-count hit-rate=1;no-match=-
+  [12/30] omp-p10-count hit-rate=1;no-match=-
+  [13/30] mpi-np8-count hit-rate=10;no-match=-
+  [14/30] mpi-np8-list hit-rate=10;no-match=-
+  [15/30] seq-list hit-rate=10;no-match=-
+  [16/30] seq-count hit-rate=10;no-match=-
+  [17/30] omp-p10-count hit-rate=10;no-match=-
+  [18/30] omp-p10-list hit-rate=10;no-match=-
+  gen --size 256M --npat 1000 --minlen 8 --maxlen 32 --hit-rate 100 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-7c4c650a0f.bin 268435456 B, 1000 patterns (len 8..32), injected 25561 hits + 0 boundary + 0 partial, dropped 39, 142 ms
+  [19/30] mpi-np8-list hit-rate=100;no-match=-
+  [20/30] omp-p10-count hit-rate=100;no-match=-
+  [21/30] seq-list hit-rate=100;no-match=-
+  [22/30] mpi-np8-count hit-rate=100;no-match=-
+  [23/30] omp-p10-list hit-rate=100;no-match=-
+  [24/30] seq-count hit-rate=100;no-match=-
+  gen --size 256M --npat 1000 --minlen 8 --maxlen 32 --hit-rate 1000 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-f418648102.bin 268435456 B, 1000 patterns (len 8..32), injected 251417 hits + 0 boundary + 0 partial, dropped 4583, 206 ms
+  [25/30] omp-p10-count hit-rate=1000;no-match=-
+  [26/30] mpi-np8-list hit-rate=1000;no-match=-
+  [27/30] mpi-np8-count hit-rate=1000;no-match=-
+  [28/30] seq-count hit-rate=1000;no-match=-
+  [29/30] seq-list hit-rate=1000;no-match=-
+  [30/30] omp-p10-list hit-rate=1000;no-match=-
+[e4_hits] done in 189 s -> ~/prir-projekt/results/raw/e4_hits.csv
+[e10_grid_cpu] 64 runs, 16 datasets
+  gen --size 256M --npat 1000 --minlen 8 --maxlen 16 --hit-rate 10 --partial-rate 0 --prefix-share 0.6 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-e100bfadce.bin 268435456 B, 1000 patterns (len 8..16), injected 2560 hits + 0 boundary + 0 partial, dropped 0, 159 ms
+  [1/64] omp-p10-il8 minlen=8;maxlen=16;partial-rate=0
+  [2/64] seq-stats minlen=8;maxlen=16;partial-rate=0
+  [3/64] seq minlen=8;maxlen=16;partial-rate=0
+  [4/64] omp-p10 minlen=8;maxlen=16;partial-rate=0
+  gen --size 256M --npat 1000 --minlen 8 --maxlen 16 --hit-rate 10 --partial-rate 300 --prefix-share 0.6 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-79e84c557a.bin 268435456 B, 1000 patterns (len 8..16), injected 2556 hits + 0 boundary + 76643 partial, dropped 161, 159 ms
+  [5/64] seq-stats minlen=8;maxlen=16;partial-rate=300
+  [6/64] omp-p10-il8 minlen=8;maxlen=16;partial-rate=300
+  [7/64] omp-p10 minlen=8;maxlen=16;partial-rate=300
+  [8/64] seq minlen=8;maxlen=16;partial-rate=300
+  gen --size 256M --npat 1000 --minlen 8 --maxlen 16 --hit-rate 10 --partial-rate 3000 --prefix-share 0.6 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-b029a17bc1.bin 268435456 B, 1000 patterns (len 8..16), injected 2520 hits + 0 boundary + 753661 partial, dropped 14379, 249 ms
+  [9/64] seq-stats minlen=8;maxlen=16;partial-rate=3000
+  [10/64] omp-p10 minlen=8;maxlen=16;partial-rate=3000
+  [11/64] omp-p10-il8 minlen=8;maxlen=16;partial-rate=3000
+  [12/64] seq minlen=8;maxlen=16;partial-rate=3000
+  gen --size 256M --npat 1000 --minlen 8 --maxlen 16 --hit-rate 10 --partial-rate 30000 --prefix-share 0.6 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-3505aa92f3.bin 268435456 B, 1000 patterns (len 8..16), injected 2205 hits + 0 boundary + 6471766 partial, dropped 1208589, 1083 ms
+  [13/64] omp-p10 minlen=8;maxlen=16;partial-rate=30000
+  [14/64] seq-stats minlen=8;maxlen=16;partial-rate=30000
+  [15/64] seq minlen=8;maxlen=16;partial-rate=30000
+  [16/64] omp-p10-il8 minlen=8;maxlen=16;partial-rate=30000
+  gen --size 256M --npat 1000 --minlen 16 --maxlen 32 --hit-rate 10 --partial-rate 0 --prefix-share 0.6 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-f141942ee3.bin 268435456 B, 1000 patterns (len 16..32), injected 2559 hits + 0 boundary + 0 partial, dropped 1, 140 ms
+  [17/64] omp-p10 minlen=16;maxlen=32;partial-rate=0
+  [18/64] seq minlen=16;maxlen=32;partial-rate=0
+  [19/64] seq-stats minlen=16;maxlen=32;partial-rate=0
+  [20/64] omp-p10-il8 minlen=16;maxlen=32;partial-rate=0
+  gen --size 256M --npat 1000 --minlen 16 --maxlen 32 --hit-rate 10 --partial-rate 300 --prefix-share 0.6 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-054c81ba98.bin 268435456 B, 1000 patterns (len 16..32), injected 2548 hits + 0 boundary + 76514 partial, dropped 298, 144 ms
+  [21/64] omp-p10-il8 minlen=16;maxlen=32;partial-rate=300
+  [22/64] omp-p10 minlen=16;maxlen=32;partial-rate=300
+  [23/64] seq-stats minlen=16;maxlen=32;partial-rate=300
+  [24/64] seq minlen=16;maxlen=32;partial-rate=300
+  gen --size 256M --npat 1000 --minlen 16 --maxlen 32 --hit-rate 10 --partial-rate 3000 --prefix-share 0.6 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-b9580af6db.bin 268435456 B, 1000 patterns (len 16..32), injected 2478 hits + 0 boundary + 741043 partial, dropped 27039, 209 ms
+  [25/64] seq minlen=16;maxlen=32;partial-rate=3000
+  [26/64] omp-p10-il8 minlen=16;maxlen=32;partial-rate=3000
+  [27/64] seq-stats minlen=16;maxlen=32;partial-rate=3000
+  [28/64] omp-p10 minlen=16;maxlen=32;partial-rate=3000
+  gen --size 256M --npat 1000 --minlen 16 --maxlen 32 --hit-rate 10 --partial-rate 30000 --prefix-share 0.6 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-0617b823d7.bin 268435456 B, 1000 patterns (len 16..32), injected 1912 hits + 0 boundary + 5657183 partial, dropped 2023465, 1093 ms
+  [29/64] seq minlen=16;maxlen=32;partial-rate=30000
+  [30/64] omp-p10-il8 minlen=16;maxlen=32;partial-rate=30000
+  [31/64] omp-p10 minlen=16;maxlen=32;partial-rate=30000
+  [32/64] seq-stats minlen=16;maxlen=32;partial-rate=30000
+  gen --size 256M --npat 1000 --minlen 32 --maxlen 64 --hit-rate 10 --partial-rate 0 --prefix-share 0.6 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-e3744d63ef.bin 268435456 B, 1000 patterns (len 32..64), injected 2558 hits + 0 boundary + 0 partial, dropped 2, 137 ms
+  [33/64] omp-p10 minlen=32;maxlen=64;partial-rate=0
+  [34/64] seq-stats minlen=32;maxlen=64;partial-rate=0
+  [35/64] seq minlen=32;maxlen=64;partial-rate=0
+  [36/64] omp-p10-il8 minlen=32;maxlen=64;partial-rate=0
+  gen --size 256M --npat 1000 --minlen 32 --maxlen 64 --hit-rate 10 --partial-rate 300 --prefix-share 0.6 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-bf4a4dbca7.bin 268435456 B, 1000 patterns (len 32..64), injected 2531 hits + 0 boundary + 76222 partial, dropped 607, 152 ms
+  [37/64] seq minlen=32;maxlen=64;partial-rate=300
+  [38/64] omp-p10 minlen=32;maxlen=64;partial-rate=300
+  [39/64] omp-p10-il8 minlen=32;maxlen=64;partial-rate=300
+  [40/64] seq-stats minlen=32;maxlen=64;partial-rate=300
+  gen --size 256M --npat 1000 --minlen 32 --maxlen 64 --hit-rate 10 --partial-rate 3000 --prefix-share 0.6 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-9b1ee45a67.bin 268435456 B, 1000 patterns (len 32..64), injected 2400 hits + 0 boundary + 716968 partial, dropped 51192, 233 ms
+  [41/64] seq-stats minlen=32;maxlen=64;partial-rate=3000
+  [42/64] seq minlen=32;maxlen=64;partial-rate=3000
+  [43/64] omp-p10 minlen=32;maxlen=64;partial-rate=3000
+  [44/64] omp-p10-il8 minlen=32;maxlen=64;partial-rate=3000
+  gen --size 256M --npat 1000 --minlen 32 --maxlen 64 --hit-rate 10 --partial-rate 30000 --prefix-share 0.6 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-1fc8278830.bin 268435456 B, 1000 patterns (len 32..64), injected 1497 hits + 0 boundary + 4504835 partial, dropped 3176228, 1116 ms
+  [45/64] seq minlen=32;maxlen=64;partial-rate=30000
+  [46/64] seq-stats minlen=32;maxlen=64;partial-rate=30000
+  [47/64] omp-p10 minlen=32;maxlen=64;partial-rate=30000
+  [48/64] omp-p10-il8 minlen=32;maxlen=64;partial-rate=30000
+  gen --size 256M --npat 1000 --minlen 4 --maxlen 8 --hit-rate 10 --partial-rate 0 --prefix-share 0.6 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-0a17923e58.bin 268435456 B, 1000 patterns (len 4..8), injected 2560 hits + 0 boundary + 0 partial, dropped 0, 144 ms
+  [49/64] omp-p10-il8 minlen=4;maxlen=8;partial-rate=0
+  [50/64] seq-stats minlen=4;maxlen=8;partial-rate=0
+  [51/64] seq minlen=4;maxlen=8;partial-rate=0
+  [52/64] omp-p10 minlen=4;maxlen=8;partial-rate=0
+  gen --size 256M --npat 1000 --minlen 4 --maxlen 8 --hit-rate 10 --partial-rate 300 --prefix-share 0.6 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-51f213d234.bin 268435456 B, 1000 patterns (len 4..8), injected 2559 hits + 0 boundary + 76723 partial, dropped 78, 128 ms
+  [53/64] omp-p10 minlen=4;maxlen=8;partial-rate=300
+  [54/64] seq-stats minlen=4;maxlen=8;partial-rate=300
+  [55/64] omp-p10-il8 minlen=4;maxlen=8;partial-rate=300
+  [56/64] seq minlen=4;maxlen=8;partial-rate=300
+  gen --size 256M --npat 1000 --minlen 4 --maxlen 8 --hit-rate 10 --partial-rate 3000 --prefix-share 0.6 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-e813d930c4.bin 268435456 B, 1000 patterns (len 4..8), injected 2544 hits + 0 boundary + 760321 partial, dropped 7695, 238 ms
+  [57/64] seq-stats minlen=4;maxlen=8;partial-rate=3000
+  [58/64] seq minlen=4;maxlen=8;partial-rate=3000
+  [59/64] omp-p10 minlen=4;maxlen=8;partial-rate=3000
+  [60/64] omp-p10-il8 minlen=4;maxlen=8;partial-rate=3000
+  gen --size 256M --npat 1000 --minlen 4 --maxlen 8 --hit-rate 10 --partial-rate 30000 --prefix-share 0.6 --alphabet full --seed 2026
+sigscan-gen: ~/prir-projekt/data/ds-ae44d6a1d0.bin 268435456 B, 1000 patterns (len 4..8), injected 2366 hits + 0 boundary + 6985799 partial, dropped 694395, 1112 ms
+  [61/64] seq minlen=4;maxlen=8;partial-rate=30000
+  [62/64] omp-p10-il8 minlen=4;maxlen=8;partial-rate=30000
+  [63/64] seq-stats minlen=4;maxlen=8;partial-rate=30000
+  [64/64] omp-p10 minlen=4;maxlen=8;partial-rate=30000
+[e10_grid_cpu] done in 360 s -> ~/prir-projekt/results/raw/e10_grid_cpu.csv
+exit 0

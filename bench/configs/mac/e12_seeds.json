@@ -1,0 +1,43 @@
+{
+  "name": "e12_seeds",
+  "title": "Wpływ ziarna danych na przepustowość",
+  "dataset": {
+    "size": "256M"
+  },
+  "matrix": {
+    "seed": [
+      2026,
+      2027,
+      2028
+    ]
+  },
+  "runs": [
+    {
+      "impl": "seq"
+    },
+    {
+      "impl": "omp",
+      "label": "omp-p10",
+      "args": {
+        "threads": 10,
+        "schedule": "dynamic",
+        "chunk": "1M"
+      }
+    },
+    {
+      "impl": "omp",
+      "label": "omp-p10-il8",
+      "args": {
+        "threads": 10,
+        "schedule": "dynamic",
+        "chunk": "1M",
+        "interleave": 8
+      }
+    },
+    {
+      "impl": "mpi",
+      "label": "mpi-np8",
+      "np": 8
+    }
+  ]
+}

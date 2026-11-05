@@ -1,0 +1,10 @@
+unlocked gm=32 256M 9.4550
+unlocked gm=32 2G 100.0718
+unlocked gm=4 256M 10.7137
+unlocked gm=4 2G 108.4549
+locked1005 gm=32 256M 13.3941
+locked1005 gm=32 512M 27.3629
+locked1005 gm=32 1G 56.1156
+locked1005 gm=32 2G 114.7772
+locked1005 gm=4 2G 120.0801
+DONE

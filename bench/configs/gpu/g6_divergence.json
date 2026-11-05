@@ -1,0 +1,47 @@
+{
+  "name": "g6_divergence",
+  "title": "E9c: divergence vs prefix-share / alfabet",
+  "dataset": {
+    "size": "256M"
+  },
+  "matrix": [
+    {
+      "prefix-share": 0.0
+    },
+    {
+      "prefix-share": 0.3
+    },
+    {
+      "prefix-share": 0.6
+    },
+    {
+      "prefix-share": 0.9
+    },
+    {
+      "alphabet": "ascii"
+    },
+    {
+      "alphabet": "16"
+    },
+    {
+      "alphabet": "dna"
+    }
+  ],
+  "runs": [
+    {
+      "impl": "cuda",
+      "label": "cuda",
+      "args": {
+        "kernel": "smem-root"
+      }
+    },
+    {
+      "impl": "seq",
+      "label": "seq-colab"
+    },
+    {
+      "impl": "seq",
+      "stats": true
+    }
+  ]
+}

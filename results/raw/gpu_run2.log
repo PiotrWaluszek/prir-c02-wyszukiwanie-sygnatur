@@ -1,0 +1,29 @@
+[colab] Creating session 'c02'...
+[colab] Session READY.
+[colab] Uploaded '/var/folders/lz/gpys8mhn5kj8krktmn5782xw0000gn/T/tmp.3Oz4NYyCUP/src.tgz' to '/content/src.tgz'
+[doctest] assertions: 16478 | 16478 passed | 0 failed |
+[doctest] Status: SUCCESS!
+ALL OK
+wrote /content/env.txt
+[remote exit] 0
+[colab] Downloaded '/content/env.txt' to 'results/env/colab-t4.txt'
+[g5_block] started
+  STATE running   [26/30] cuda kernel=smem-all;block=32
+  STATE 0   [30/30] cuda kernel=global;block=512
+[colab] Downloaded '/content/results/g5_block.csv' to 'results/raw/g5_block.csv'
+[colab] Download failed: File or directory not found: /content/results/g5_block_stats.csv
+[g5_block] downloaded
+[g7_pipeline] started
+  STATE 0   [13/13] cuda-pipeline streams=1;chunk=16M
+[colab] Downloaded '/content/results/g7_pipeline.csv' to 'results/raw/g7_pipeline.csv'
+[colab] Download failed: File or directory not found: /content/results/g7_pipeline_stats.csv
+[g7_pipeline] downloaded
+[g2_npat] started
+  STATE running   [13/20] omp-colab-p2-il8 npat=10000
+  
+  STATE 0   [20/20] seq-stats npat=100000
+[colab] Downloaded '/content/results/g2_npat.csv' to 'results/raw/g2_npat.csv'
+[colab] Downloaded '/content/results/g2_npat_stats.csv' to 'results/raw/g2_npat_stats.csv'
+[g2_npat] downloaded
+[g4_hits] started
+  STATE running   [11/15] seq-colab hit-rate=100;no-match=-

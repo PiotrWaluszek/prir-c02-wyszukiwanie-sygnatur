@@ -1,0 +1,62 @@
+{
+  "name": "e3_len",
+  "title": "Przepustowość vs długość wzorców",
+  "dataset": {
+    "size": "256M"
+  },
+  "matrix": [
+    {
+      "minlen": 4,
+      "maxlen": 8
+    },
+    {
+      "minlen": 8,
+      "maxlen": 16
+    },
+    {
+      "minlen": 16,
+      "maxlen": 32
+    },
+    {
+      "minlen": 32,
+      "maxlen": 64
+    },
+    {
+      "minlen": 4,
+      "maxlen": 64
+    }
+  ],
+  "runs": [
+    {
+      "impl": "seq"
+    },
+    {
+      "impl": "omp",
+      "label": "omp-p10",
+      "args": {
+        "threads": 10,
+        "schedule": "dynamic",
+        "chunk": "1M"
+      }
+    },
+    {
+      "impl": "mpi",
+      "label": "mpi-np8",
+      "np": 8
+    },
+    {
+      "impl": "seq",
+      "stats": true
+    },
+    {
+      "impl": "omp",
+      "label": "omp-p10-il8",
+      "args": {
+        "threads": 10,
+        "schedule": "dynamic",
+        "chunk": "1M",
+        "interleave": 8
+      }
+    }
+  ]
+}

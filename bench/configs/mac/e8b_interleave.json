@@ -1,0 +1,44 @@
+{
+  "name": "e8b_interleave",
+  "title": "Przeplot K niezależnych ścieżek automatu w jednym wątku",
+  "dataset": {
+    "size": "256M"
+  },
+  "matrix": {
+    "npat": [
+      100,
+      1000,
+      10000
+    ]
+  },
+  "runs": [
+    {
+      "impl": "seq",
+      "label": "seq-dense",
+      "args": {
+        "interleave": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "layout": "dense"
+      }
+    },
+    {
+      "impl": "seq",
+      "label": "seq-compressed",
+      "args": {
+        "interleave": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "layout": "compressed"
+      }
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "name": "e2_npat",
+  "title": "Przepustowość i rozmiar automatu vs liczba wzorców (+ E8 gęsty vs skompresowany)",
+  "dataset": {
+    "size": "256M"
+  },
+  "matrix": {
+    "npat": [
+      10,
+      100,
+      1000,
+      10000,
+      100000
+    ]
+  },
+  "runs": [
+    {
+      "impl": "seq",
+      "label": "seq-dense",
+      "args": {
+        "layout": "dense"
+      }
+    },
+    {
+      "impl": "seq",
+      "label": "seq-compressed",
+      "args": {
+        "layout": "compressed"
+      }
+    },
+    {
+      "impl": "omp",
+      "label": "omp-p10",
+      "args": {
+        "threads": 10,
+        "schedule": "dynamic",
+        "chunk": "1M"
+      }
+    },
+    {
+      "impl": "omp",
+      "label": "omp-p10-compressed",
+      "args": {
+        "threads": 10,
+        "schedule": "dynamic",
+        "chunk": "1M",
+        "layout": "compressed"
+      }
+    },
+    {
+      "impl": "mpi",
+      "label": "mpi-np8",
+      "np": 8,
+      "only": {
+        "npat": [
+          10,
+          100,
+          1000,
+          10000
+        ]
+      }
+    },
+    {
+      "impl": "seq",
+      "stats": true
+    },
+    {
+      "impl": "omp",
+      "label": "omp-p10-il8",
+      "args": {
+        "threads": 10,
+        "schedule": "dynamic",
+        "chunk": "1M",
+        "interleave": 8
+      }
+    }
+  ]
+}

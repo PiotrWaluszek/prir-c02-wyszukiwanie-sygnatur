@@ -1,0 +1,50 @@
+# Environment - 2026-10-31 20:06 UTC
+
+## git
+84be82b
+
+## os
+Linux 5351b8a9f746 6.6.159+ #1 SMP Thu Oct 22 03:07:54 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+
+## cpu
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           46 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  2
+On-line CPU(s) list:                     0,1
+Vendor ID:                               GenuineIntel
+Model name:                              Intel(R) Xeon(R) CPU @ 2.00GHz
+CPU family:                              6
+Model:                                   85
+Thread(s) per core:                      2
+Core(s) per socket:                      1
+Socket(s):                               1
+Stepping:                                3
+BogoMIPS:                                4000.24
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves arat md_clear arch_capabilities
+Hypervisor vendor:                       KVM
+Virtualization type:                     full
+L1d cache:                               32 KiB (1 instance)
+L1i cache:                               32 KiB (1 instance)
+L2 cache:                                1 MiB (1 instance)
+L3 cache:                                38.5 MiB (1 instance)
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0,1
+
+## memory
+               total        used        free      shared  buff/cache   available
+Mem:            12Gi       1.1Gi       8.1Gi       2.4Mi       3.8Gi        11Gi
+Swap:             0B          0B          0B
+
+## compilers
+c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+cmake version 3.31.10
+mpirun (Open MPI) 4.1.6
+Cuda compilation tools, release 13.0, V13.0.88
+Build cuda_13.0.r13.0/compiler.36424714_0
+Python 3.13.16
+
+## gpu
+name, driver_version, memory.total [MiB], clocks.max.sm [MHz], clocks.max.memory [MHz], pcie.link.gen.max, pcie.link.width.max
+Tesla T4, 580.82.07, 15360 MiB, 1590 MHz, 5001 MHz, 3, 16

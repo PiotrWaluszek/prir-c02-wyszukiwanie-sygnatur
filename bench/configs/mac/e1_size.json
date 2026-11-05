@@ -1,0 +1,53 @@
+{
+  "name": "e1_size",
+  "title": "Przepustowość vs rozmiar tekstu",
+  "matrix": {
+    "size": [
+      "16M",
+      "32M",
+      "64M",
+      "128M",
+      "256M",
+      "512M",
+      "1G",
+      "2G"
+    ]
+  },
+  "runs": [
+    {
+      "impl": "seq"
+    },
+    {
+      "impl": "omp",
+      "label": "omp-p8",
+      "args": {
+        "threads": 8,
+        "schedule": "blocks"
+      }
+    },
+    {
+      "impl": "omp",
+      "label": "omp-p10",
+      "args": {
+        "threads": 10,
+        "schedule": "dynamic",
+        "chunk": "1M"
+      }
+    },
+    {
+      "impl": "mpi",
+      "label": "mpi-np8",
+      "np": 8
+    },
+    {
+      "impl": "omp",
+      "label": "omp-p10-il8",
+      "args": {
+        "threads": 10,
+        "schedule": "dynamic",
+        "chunk": "1M",
+        "interleave": 8
+      }
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "name": "g10_grid",
+  "dataset": {
+    "size": "256M",
+    "prefix-share": 0.6
+  },
+  "matrix": [
+    {
+      "minlen": 4,
+      "maxlen": 8,
+      "partial-rate": 0
+    },
+    {
+      "minlen": 4,
+      "maxlen": 8,
+      "partial-rate": 300
+    },
+    {
+      "minlen": 4,
+      "maxlen": 8,
+      "partial-rate": 3000
+    },
+    {
+      "minlen": 4,
+      "maxlen": 8,
+      "partial-rate": 30000
+    },
+    {
+      "minlen": 8,
+      "maxlen": 16,
+      "partial-rate": 0
+    },
+    {
+      "minlen": 8,
+      "maxlen": 16,
+      "partial-rate": 300
+    },
+    {
+      "minlen": 8,
+      "maxlen": 16,
+      "partial-rate": 3000
+    },
+    {
+      "minlen": 8,
+      "maxlen": 16,
+      "partial-rate": 30000
+    },
+    {
+      "minlen": 16,
+      "maxlen": 32,
+      "partial-rate": 0
+    },
+    {
+      "minlen": 16,
+      "maxlen": 32,
+      "partial-rate": 300
+    },
+    {
+      "minlen": 16,
+      "maxlen": 32,
+      "partial-rate": 3000
+    },
+    {
+      "minlen": 16,
+      "maxlen": 32,
+      "partial-rate": 30000
+    },
+    {
+      "minlen": 32,
+      "maxlen": 64,
+      "partial-rate": 0
+    },
+    {
+      "minlen": 32,
+      "maxlen": 64,
+      "partial-rate": 300
+    },
+    {
+      "minlen": 32,
+      "maxlen": 64,
+      "partial-rate": 3000
+    },
+    {
+      "minlen": 32,
+      "maxlen": 64,
+      "partial-rate": 30000
+    }
+  ],
+  "runs": [
+    {
+      "impl": "cuda",
+      "label": "cuda",
+      "args": {
+        "kernel": "smem-root"
+      }
+    },
+    {
+      "impl": "seq",
+      "label": "seq-colab"
+    },
+    {
+      "impl": "seq",
+      "stats": true
+    },
+    {
+      "impl": "omp",
+      "label": "omp-colab-p2-il8",
+      "args": {
+        "threads": 2,
+        "schedule": "blocks",
+        "interleave": 8
+      }
+    }
+  ]
+}

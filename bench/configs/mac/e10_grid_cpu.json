@@ -1,0 +1,118 @@
+{
+  "name": "e10_grid_cpu",
+  "title": "Pytanie badawcze: siatka długość × częściowe dopasowania (CPU Mac)",
+  "dataset": {
+    "size": "256M",
+    "prefix-share": 0.6
+  },
+  "matrix": [
+    {
+      "minlen": 4,
+      "maxlen": 8,
+      "partial-rate": 0
+    },
+    {
+      "minlen": 4,
+      "maxlen": 8,
+      "partial-rate": 300
+    },
+    {
+      "minlen": 4,
+      "maxlen": 8,
+      "partial-rate": 3000
+    },
+    {
+      "minlen": 4,
+      "maxlen": 8,
+      "partial-rate": 30000
+    },
+    {
+      "minlen": 8,
+      "maxlen": 16,
+      "partial-rate": 0
+    },
+    {
+      "minlen": 8,
+      "maxlen": 16,
+      "partial-rate": 300
+    },
+    {
+      "minlen": 8,
+      "maxlen": 16,
+      "partial-rate": 3000
+    },
+    {
+      "minlen": 8,
+      "maxlen": 16,
+      "partial-rate": 30000
+    },
+    {
+      "minlen": 16,
+      "maxlen": 32,
+      "partial-rate": 0
+    },
+    {
+      "minlen": 16,
+      "maxlen": 32,
+      "partial-rate": 300
+    },
+    {
+      "minlen": 16,
+      "maxlen": 32,
+      "partial-rate": 3000
+    },
+    {
+      "minlen": 16,
+      "maxlen": 32,
+      "partial-rate": 30000
+    },
+    {
+      "minlen": 32,
+      "maxlen": 64,
+      "partial-rate": 0
+    },
+    {
+      "minlen": 32,
+      "maxlen": 64,
+      "partial-rate": 300
+    },
+    {
+      "minlen": 32,
+      "maxlen": 64,
+      "partial-rate": 3000
+    },
+    {
+      "minlen": 32,
+      "maxlen": 64,
+      "partial-rate": 30000
+    }
+  ],
+  "runs": [
+    {
+      "impl": "seq"
+    },
+    {
+      "impl": "omp",
+      "label": "omp-p10",
+      "args": {
+        "threads": 10,
+        "schedule": "dynamic",
+        "chunk": "1M"
+      }
+    },
+    {
+      "impl": "seq",
+      "stats": true
+    },
+    {
+      "impl": "omp",
+      "label": "omp-p10-il8",
+      "args": {
+        "threads": 10,
+        "schedule": "dynamic",
+        "chunk": "1M",
+        "interleave": 8
+      }
+    }
+  ]
+}

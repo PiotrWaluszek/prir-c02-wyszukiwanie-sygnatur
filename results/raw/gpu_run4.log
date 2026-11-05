@@ -1,0 +1,32 @@
+[g6_divergence] started
+  STATE running   [8/21] seq-colab prefix-share=0.3;alphabet=dna
+  STATE running   [11/21] seq-colab prefix-share=0.0;alphabet=full
+  STATE running   [16/21] cuda prefix-share=0.6;alphabet=full
+  STATE 0   [21/21] seq-colab prefix-share=0.9;alphabet=full
+[colab] Downloaded '/content/results/g6_divergence.csv' to 'results/raw/g6_divergence.csv'
+[colab] Downloaded '/content/results/g6_divergence_stats.csv' to 'results/raw/g6_divergence_stats.csv'
+[g6_divergence] downloaded
+[g4_hits] started
+  STATE running   [11/15] seq-colab hit-rate=100;no-match=-
+  STATE 0   [15/15] cuda-count hit-rate=1000;no-match=-
+[colab] Downloaded '/content/results/g4_hits.csv' to 'results/raw/g4_hits.csv'
+[colab] Download failed: File or directory not found: /content/results/g4_hits_stats.csv
+[g4_hits] downloaded
+[g10_grid] started
+  STATE running   [9/64] seq-stats minlen=8;maxlen=16;partial-rate=3000
+  STATE running   [15/64] cuda minlen=8;maxlen=16;partial-rate=30000
+  STATE running   [22/64] seq-colab minlen=16;maxlen=32;partial-rate=300
+  STATE running   [30/64] omp-colab-p2-il8 minlen=16;maxlen=32;partial-rate=30000
+  STATE running   [34/64] seq-stats minlen=32;maxlen=64;partial-rate=0
+  STATE running   [42/64] cuda minlen=32;maxlen=64;partial-rate=3000
+  STATE running   [47/64] seq-colab minlen=32;maxlen=64;partial-rate=30000
+  STATE running   [48/64] omp-colab-p2-il8 minlen=32;maxlen=64;partial-rate=30000
+  STATE running   [54/64] seq-stats minlen=4;maxlen=8;partial-rate=300
+  STATE running   [61/64] cuda minlen=4;maxlen=8;partial-rate=30000
+  STATE 0   [64/64] seq-colab minlen=4;maxlen=8;partial-rate=30000
+[colab] Downloaded '/content/results/g10_grid.csv' to 'results/raw/g10_grid.csv'
+[colab] Downloaded '/content/results/g10_grid_stats.csv' to 'results/raw/g10_grid_stats.csv'
+[g10_grid] downloaded
+[colab] Stopping session 'c02'...
+[colab] Session terminated.
+exit 0

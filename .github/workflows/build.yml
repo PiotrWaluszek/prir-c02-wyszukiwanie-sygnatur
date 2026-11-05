@@ -1,0 +1,69 @@
+# Build, tests and demo on macOS, Windows, Linux and in Docker (no GPU).
+name: build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  windows:
+    name: Windows (MSVC, MS-MPI)
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: mpi4py/setup-mpi@v1
+        with:
+          mpi: msmpi
+      - name: Build
+        run: |
+          cmake -B build
+          cmake --build build --config Release --parallel
+      - name: Tests
+        run: ctest --test-dir build -C Release --output-on-failure
+      - name: Demo
+        run: powershell -ExecutionPolicy Bypass -File demo\demo.ps1 -Size 32M
+
+  macos:
+    name: macOS (Apple clang, libomp, Open MPI)
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Dependencies
+        run: brew install libomp open-mpi
+      - name: Build
+        run: |
+          cmake -B build
+          cmake --build build --parallel
+      - name: Tests
+        run: ctest --test-dir build --output-on-failure
+      - name: Demo
+        run: bash demo/demo.sh 32M
+
+  linux:
+    name: Linux (g++, Open MPI)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Dependencies
+        run: sudo apt-get update && sudo apt-get install -y libopenmpi-dev openmpi-bin
+      - name: Build
+        run: |
+          cmake -B build
+          cmake --build build --parallel
+      - name: Tests
+        run: ctest --test-dir build --output-on-failure
+      - name: Demo
+        run: bash demo/demo.sh 32M
+
+  docker:
+    name: Docker (Ubuntu 24.04)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build image
+        run: docker build -t c02 .
+      - name: Demo
+        run: docker run --rm c02
+      - name: Tests
+        run: docker run --rm c02 ctest --test-dir build --output-on-failure

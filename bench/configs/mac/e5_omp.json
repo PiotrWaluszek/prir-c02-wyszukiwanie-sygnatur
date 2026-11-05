@@ -1,0 +1,109 @@
+{
+  "name": "e5_omp",
+  "title": "OpenMP: przyspieszenie i efektywność, p = 1..10",
+  "runs": [
+    {
+      "impl": "seq"
+    },
+    {
+      "impl": "omp",
+      "label": "omp-blocks",
+      "args": {
+        "threads": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "schedule": "blocks"
+      }
+    },
+    {
+      "impl": "omp",
+      "label": "omp-static-1M",
+      "args": {
+        "threads": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "schedule": "static",
+        "chunk": "1M"
+      }
+    },
+    {
+      "impl": "omp",
+      "label": "omp-dynamic-1M",
+      "args": {
+        "threads": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "schedule": "dynamic",
+        "chunk": "1M"
+      }
+    },
+    {
+      "impl": "omp",
+      "label": "omp-guided-1M",
+      "args": {
+        "threads": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "schedule": "guided",
+        "chunk": "1M"
+      }
+    },
+    {
+      "impl": "omp",
+      "label": "omp-dynamic-1M-il8",
+      "args": {
+        "threads": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "schedule": "dynamic",
+        "chunk": "1M",
+        "interleave": 8
+      }
+    }
+  ]
+}

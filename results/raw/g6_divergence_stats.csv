@@ -1,0 +1,8 @@
+dataset,text_bytes,npat,states,dense_bytes,compressed_bytes,pfac_table_bytes,pfac_mean_steps,pfac_partial_ratio,pfac_max_steps,ac_depth_mean,exp,label,tag
+ds-b24dff522f,268435456,1000,17272,18381412,1455872,17686528,2.093524,1.000000,32,2.113702,g6_divergence,seq-stats,"prefix-share=0.3;alphabet=16"
+ds-122e29c269,268435456,1000,18010,19166644,1517864,18442240,1.074706,1.000000,32,1.077308,g6_divergence,seq-stats,"prefix-share=0.3;alphabet=ascii"
+ds-3b00b99c3f,268435456,1000,15309,16292780,1290980,15676416,4.676872,1.000000,32,4.926218,g6_divergence,seq-stats,"prefix-share=0.3;alphabet=dna"
+ds-95a3f83e2a,268435456,1000,19183,20414716,1616396,19643392,0.999689,0.984377,32,1.001835,g6_divergence,seq-stats,"prefix-share=0.0;alphabet=full"
+ds-fd003b218b,268435456,1000,18222,19392212,1535672,18659328,0.956119,0.945311,32,0.958584,g6_divergence,seq-stats,"prefix-share=0.3;alphabet=full"
+ds-442cc8a6cc,268435456,1000,17934,19085780,1511480,18364416,0.811114,0.804678,32,0.814438,g6_divergence,seq-stats,"prefix-share=0.6;alphabet=full"
+ds-25ddd05799,268435456,1000,16284,17330180,1372880,16674816,0.353440,0.351587,32,0.356563,g6_divergence,seq-stats,"prefix-share=0.9;alphabet=full"

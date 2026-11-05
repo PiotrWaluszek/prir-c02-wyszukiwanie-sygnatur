@@ -1,0 +1,62 @@
+{
+  "name": "g1_size",
+  "matrix": {
+    "size": [
+      "16M",
+      "32M",
+      "64M",
+      "128M",
+      "256M",
+      "512M",
+      "1G",
+      "2G"
+    ]
+  },
+  "reps": 7,
+  "runs": [
+    {
+      "impl": "cuda",
+      "label": "cuda",
+      "args": {
+        "kernel": "smem-root"
+      }
+    },
+    {
+      "impl": "cuda",
+      "label": "cuda-pipeline",
+      "args": {
+        "kernel": "smem-root",
+        "streams": 4,
+        "chunk": "16M"
+      }
+    },
+    {
+      "impl": "seq",
+      "label": "seq-colab"
+    },
+    {
+      "impl": "omp",
+      "label": "omp-colab-p2",
+      "args": {
+        "threads": 2,
+        "schedule": "blocks"
+      }
+    },
+    {
+      "impl": "seq",
+      "label": "seq-colab-il8",
+      "args": {
+        "interleave": 8
+      }
+    },
+    {
+      "impl": "omp",
+      "label": "omp-colab-p2-il8",
+      "args": {
+        "threads": 2,
+        "schedule": "blocks",
+        "interleave": 8
+      }
+    }
+  ]
+}

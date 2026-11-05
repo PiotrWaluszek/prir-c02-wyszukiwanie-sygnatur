@@ -1,0 +1,176 @@
+[colab] Creating session 'c02'...
+[colab] Session READY.
+[colab] Uploaded '/var/folders/lz/gpys8mhn5kj8krktmn5782xw0000gn/T/tmp.N65woygzA8/src.tgz' to '/content/src.tgz'
+[doctest] assertions: 16478 | 16478 passed | 0 failed |
+[doctest] Status: SUCCESS!
+ALL OK
+wrote /content/env.txt
+[remote exit] 0
+[colab] Downloaded '/content/env.txt' to 'results/env/colab-t4.txt'
+[g1_size] 48 runs, 8 datasets
+  gen --size 128M --npat 1000 --minlen 8 --maxlen 32 --hit-rate 10 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: /content/sigscan/data/ds-93ee2bcf82.bin 134217728 B, 1000 patterns (len 8..32), injected 1279 hits + 0 boundary + 0 partial, dropped 1, 116 ms
+  [1/48] cuda-pipeline size=128M
+  [2/48] omp-colab-p2 size=128M
+  [3/48] seq-colab size=128M
+  [4/48] seq-colab-il8 size=128M
+  [5/48] cuda size=128M
+  [6/48] omp-colab-p2-il8 size=128M
+  gen --size 16M --npat 1000 --minlen 8 --maxlen 32 --hit-rate 10 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: /content/sigscan/data/ds-299ea8016e.bin 16777216 B, 1000 patterns (len 8..32), injected 160 hits + 0 boundary + 0 partial, dropped 0, 15 ms
+  [7/48] omp-colab-p2-il8 size=16M
+  [8/48] seq-colab size=16M
+  [9/48] omp-colab-p2 size=16M
+  [10/48] cuda size=16M
+  [11/48] cuda-pipeline size=16M
+  [12/48] seq-colab-il8 size=16M
+  gen --size 1G --npat 1000 --minlen 8 --maxlen 32 --hit-rate 10 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: /content/sigscan/data/ds-05d32516fc.bin 1073741824 B, 1000 patterns (len 8..32), injected 10239 hits + 0 boundary + 0 partial, dropped 1, 920 ms
+  [13/48] seq-colab-il8 size=1G
+  [14/48] seq-colab size=1G
+  [15/48] cuda-pipeline size=1G
+  [16/48] omp-colab-p2-il8 size=1G
+  [17/48] omp-colab-p2 size=1G
+  [18/48] cuda size=1G
+  gen --size 256M --npat 1000 --minlen 8 --maxlen 32 --hit-rate 10 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: /content/sigscan/data/ds-fd003b218b.bin 268435456 B, 1000 patterns (len 8..32), injected 2560 hits + 0 boundary + 0 partial, dropped 0, 222 ms
+  [19/48] seq-colab size=256M
+  [20/48] omp-colab-p2-il8 size=256M
+  [21/48] cuda-pipeline size=256M
+  [22/48] omp-colab-p2 size=256M
+  [23/48] cuda size=256M
+  [24/48] seq-colab-il8 size=256M
+  gen --size 2G --npat 1000 --minlen 8 --maxlen 32 --hit-rate 10 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: /content/sigscan/data/ds-0a57b26115.bin 2147483648 B, 1000 patterns (len 8..32), injected 20476 hits + 0 boundary + 0 partial, dropped 4, 1816 ms
+  [25/48] seq-colab size=2G
+  [26/48] omp-colab-p2 size=2G
+  [27/48] seq-colab-il8 size=2G
+  [28/48] cuda-pipeline size=2G
+  [29/48] omp-colab-p2-il8 size=2G
+  [30/48] cuda size=2G
+  gen --size 32M --npat 1000 --minlen 8 --maxlen 32 --hit-rate 10 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: /content/sigscan/data/ds-529a6b08e8.bin 33554432 B, 1000 patterns (len 8..32), injected 320 hits + 0 boundary + 0 partial, dropped 0, 30 ms
+  [31/48] omp-colab-p2 size=32M
+  [32/48] omp-colab-p2-il8 size=32M
+  [33/48] seq-colab-il8 size=32M
+  [34/48] cuda size=32M
+  [35/48] cuda-pipeline size=32M
+  [36/48] seq-colab size=32M
+  gen --size 512M --npat 1000 --minlen 8 --maxlen 32 --hit-rate 10 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: /content/sigscan/data/ds-3ff3f79981.bin 536870912 B, 1000 patterns (len 8..32), injected 5120 hits + 0 boundary + 0 partial, dropped 0, 462 ms
+  [37/48] omp-colab-p2-il8 size=512M
+  [38/48] seq-colab-il8 size=512M
+  [39/48] omp-colab-p2 size=512M
+  [40/48] seq-colab size=512M
+  [41/48] cuda size=512M
+  [42/48] cuda-pipeline size=512M
+  gen --size 64M --npat 1000 --minlen 8 --maxlen 32 --hit-rate 10 --partial-rate 0 --prefix-share 0.3 --alphabet full --seed 2026
+sigscan-gen: /content/sigscan/data/ds-5125151fc7.bin 67108864 B, 1000 patterns (len 8..32), injected 640 hits + 0 boundary + 0 partial, dropped 0, 59 ms
+  [43/48] omp-colab-p2 size=64M
+  [44/48] seq-colab size=64M
+  [45/48] cuda size=64M
+  [46/48] omp-colab-p2-il8 size=64M
+  [47/48] cuda-pipeline size=64M
+  [48/48] seq-colab-il8 size=64M
+[g1_size] done in 516 s -> /content/results/g1_size.csv
+[remote exit] 0
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ ~/.colab-cli/lib/python3.14/site-packages/jupyter_kernel_ │
+│ client/wsclient.py:1353 in _recv_reply                                       │
+│                                                                              │
+│   1350 │   │   │   │   if channel == "control":                              │
+│   1351 │   │   │   │   │   reply =                                           │
+│        self.control_channel.get_msg(timeout=timeout)                         │
+│   1352 │   │   │   │   else:                                                 │
+│ ❱ 1353 │   │   │   │   │   reply =                                           │
+│        self.shell_channel.get_msg(timeout=timeout)                           │
+│   1354 │   │   │   except queue.Empty as e:                                  │
+│   1355 │   │   │   │   msg = "Timeout waiting for reply"                     │
+│   1356 │   │   │   │   raise TimeoutError(msg) from e                        │
+│                                                                              │
+│ ~/.colab-cli/lib/python3.14/site-packages/jupyter_kernel_ │
+│ client/wsclient.py:411 in get_msg                                            │
+│                                                                              │
+│    408 │   │   ------                                                        │
+│    409 │   │   Empty exception if no message is received before the timeout. │
+│    410 │   │   """                                                           │
+│ ❱  411 │   │   return self._messages.get(timeout=timeout)                    │
+│    412 │                                                                     │
+│    413 │   def get_msgs(self) -> list[dict[str, t.Any]]:                     │
+│    414 │   │   """Get all available messages.                                │
+│                                                                              │
+│ /opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versio │
+│ ns/3.14/lib/python3.14/queue.py:209 in get                                   │
+│                                                                              │
+│   206 │   │   │   │   while not self._qsize():                               │
+│   207 │   │   │   │   │   remaining = endtime - time()                       │
+│   208 │   │   │   │   │   if remaining <= 0.0:                               │
+│ ❱ 209 │   │   │   │   │   │   raise Empty                                    │
+│   210 │   │   │   │   │   self.not_empty.wait(remaining)                     │
+│   211 │   │   │   │   │   if self.is_shutdown and not self._qsize():         │
+│   212 │   │   │   │   │   │   raise ShutDown                                 │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Empty
+
+The above exception was the direct cause of the following exception:
+
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ ~/.colab-cli/lib/python3.14/site-packages/colab_cli/comma │
+│ nds/execution.py:258 in exec_command                                         │
+│                                                                              │
+│   255 │   │   │   )                                                          │
+│   256 │   │   │   state.store.add(s)                                         │
+│   257 │   │   │                                                              │
+│ ❱ 258 │   │   │   outputs = runtime.execute_code(                            │
+│   259 │   │   │   │   code,                                                  │
+│   260 │   │   │   │   output_hook=lambda o: display_output(o, output_image), │
+│   261 │   │   │   │   timeout=timeout,                                       │
+│                                                                              │
+│ ~/.colab-cli/lib/python3.14/site-packages/colab_cli/runti │
+│ me.py:237 in execute_code                                                    │
+│                                                                              │
+│   234 │   │   │   │   │   │   if idx < len(outputs):                         │
+│   235 │   │   │   │   │   │   │   output_hook(outputs[idx])                  │
+│   236 │   │   │                                                              │
+│ ❱ 237 │   │   │   reply = self.kernel_client.execute_interactive(            │
+│   238 │   │   │   │   code, output_hook=wrapped_output_hook, **kwargs        │
+│   239 │   │   │   )                                                          │
+│   240 │   │   │   # execute_interactive returns the raw reply message        │
+│                                                                              │
+│ ~/.colab-cli/lib/python3.14/site-packages/jupyter_kernel_ │
+│ client/client.py:364 in execute_interactive                                  │
+│                                                                              │
+│   361 │   │   │   The reply message for this request                         │
+│   362 │   │   """                                                            │
+│   363 │   │   self._set_variables(variables)                                 │
+│ ❱ 364 │   │   return self._manager.client.execute_interactive(               │
+│   365 │   │   │   code,                                                      │
+│   366 │   │   │   silent=silent,                                             │
+│   367 │   │   │   store_history=store_history,                               │
+│                                                                              │
+│ ~/.colab-cli/lib/python3.14/site-packages/jupyter_kernel_ │
+│ client/wsclient.py:1112 in execute_interactive                               │
+│                                                                              │
+│   1109 │   │   │   # output is done, get the reply                           │
+│   1110 │   │   │   if timeout is not None:                                   │
+│   1111 │   │   │   │   timeout = max(0, deadline - time.monotonic())         │
+│ ❱ 1112 │   │   │   return self._recv_reply(msg_id, timeout=timeout)          │
+│   1113 │                                                                     │
+│   1114 │   def is_alive(self) -> bool:                                       │
+│   1115 │   │   """Is the kernel process still running?"""                    │
+│                                                                              │
+│ ~/.colab-cli/lib/python3.14/site-packages/jupyter_kernel_ │
+│ client/wsclient.py:1356 in _recv_reply                                       │
+│                                                                              │
+│   1353 │   │   │   │   │   reply =                                           │
+│        self.shell_channel.get_msg(timeout=timeout)                           │
+│   1354 │   │   │   except queue.Empty as e:                                  │
+│   1355 │   │   │   │   msg = "Timeout waiting for reply"                     │
+│ ❱ 1356 │   │   │   │   raise TimeoutError(msg) from e                        │
+│   1357 │   │   │   if reply["parent_header"].get("msg_id") != msg_id:        │
+│   1358 │   │   │   │   self.log.debug("Ignoring message not from request:    │
+│        %s", msg_id)                                                          │
+│   1359 │   │   │   │   continue                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+TimeoutError: Timeout waiting for reply
+exit 1

@@ -1,0 +1,5 @@
+.git
+build*
+data
+results/figures
+results/tables

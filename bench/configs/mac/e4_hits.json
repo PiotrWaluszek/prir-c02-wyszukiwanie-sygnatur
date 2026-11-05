@@ -1,0 +1,66 @@
+{
+  "name": "e4_hits",
+  "title": "Przepustowość vs częstość trafień, tryb count i list",
+  "dataset": {
+    "size": "256M"
+  },
+  "matrix": [
+    {
+      "hit-rate": 0,
+      "no-match": true
+    },
+    {
+      "hit-rate": 1
+    },
+    {
+      "hit-rate": 10
+    },
+    {
+      "hit-rate": 100
+    },
+    {
+      "hit-rate": 1000
+    }
+  ],
+  "runs": [
+    {
+      "impl": "seq",
+      "label": "seq-count"
+    },
+    {
+      "impl": "seq",
+      "label": "seq-list",
+      "mode": "list"
+    },
+    {
+      "impl": "omp",
+      "label": "omp-p10-count",
+      "args": {
+        "threads": 10,
+        "schedule": "dynamic",
+        "chunk": "1M"
+      }
+    },
+    {
+      "impl": "omp",
+      "label": "omp-p10-list",
+      "args": {
+        "threads": 10,
+        "schedule": "dynamic",
+        "chunk": "1M"
+      },
+      "mode": "list"
+    },
+    {
+      "impl": "mpi",
+      "label": "mpi-np8-count",
+      "np": 8
+    },
+    {
+      "impl": "mpi",
+      "label": "mpi-np8-list",
+      "np": 8,
+      "mode": "list"
+    }
+  ]
+}

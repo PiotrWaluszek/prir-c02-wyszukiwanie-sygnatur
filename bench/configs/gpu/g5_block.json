@@ -1,0 +1,26 @@
+{
+  "name": "g5_block",
+  "title": "E9a: rozmiar bloku × wariant kernela",
+  "runs": [
+    {
+      "impl": "cuda",
+      "args": {
+        "kernel": [
+          "global",
+          "ldg",
+          "smem-text",
+          "smem-root",
+          "smem-all"
+        ],
+        "block": [
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024
+        ]
+      }
+    }
+  ]
+}

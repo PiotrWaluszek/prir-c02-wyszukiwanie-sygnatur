@@ -1,0 +1,21 @@
+/*.pdf
+
+# build
+/build*/
+*.o
+*.out
+
+# generated data
+/data/
+!/data/README.md
+
+# python
+.venv/
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+/results/figures/
+/results/tables/

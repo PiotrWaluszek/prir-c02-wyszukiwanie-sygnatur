@@ -1,0 +1,41 @@
+{
+  "name": "g2_npat",
+  "dataset": {
+    "size": "256M"
+  },
+  "matrix": {
+    "npat": [
+      10,
+      100,
+      1000,
+      10000,
+      100000
+    ]
+  },
+  "runs": [
+    {
+      "impl": "cuda",
+      "label": "cuda",
+      "args": {
+        "kernel": "smem-root"
+      }
+    },
+    {
+      "impl": "seq",
+      "label": "seq-colab"
+    },
+    {
+      "impl": "seq",
+      "stats": true
+    },
+    {
+      "impl": "omp",
+      "label": "omp-colab-p2-il8",
+      "args": {
+        "threads": 2,
+        "schedule": "blocks",
+        "interleave": 8
+      }
+    }
+  ]
+}

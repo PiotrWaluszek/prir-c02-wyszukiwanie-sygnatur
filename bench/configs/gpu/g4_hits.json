@@ -1,0 +1,45 @@
+{
+  "name": "g4_hits",
+  "dataset": {
+    "size": "256M"
+  },
+  "matrix": [
+    {
+      "hit-rate": 0,
+      "no-match": true
+    },
+    {
+      "hit-rate": 1
+    },
+    {
+      "hit-rate": 10
+    },
+    {
+      "hit-rate": 100
+    },
+    {
+      "hit-rate": 1000
+    }
+  ],
+  "runs": [
+    {
+      "impl": "cuda",
+      "label": "cuda-count",
+      "args": {
+        "kernel": "smem-root"
+      }
+    },
+    {
+      "impl": "cuda",
+      "label": "cuda-list",
+      "args": {
+        "kernel": "smem-root"
+      },
+      "mode": "list"
+    },
+    {
+      "impl": "seq",
+      "label": "seq-colab"
+    }
+  ]
+}
